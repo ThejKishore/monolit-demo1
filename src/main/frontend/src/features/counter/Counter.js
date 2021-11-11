@@ -18,10 +18,10 @@ export function Counter() {
   const incrementValue = Number(incrementAmount) || 0;
 
   return (
-    <div>
+    <div className="w-full max-w-sm">
       <div className={styles.row}>
         <button
-          className={styles.button}
+          className="inline-block bg-red-500 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
         >
@@ -29,7 +29,7 @@ export function Counter() {
         </button>
         <span className={styles.value}>{count}</span>
         <button
-          className={styles.button}
+          className="inline-block bg-green-500 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
@@ -38,25 +38,25 @@ export function Counter() {
       </div>
       <div className={styles.row}>
         <input
-          className={styles.textbox}
+          className="appearance-none rounded-full block w-1/6 bg-gray-200 text-gray-700 border border-gray-300 rounded px-3 mr-3 leading-tight focus:outline-none focus:bg-white"
           aria-label="Set increment amount"
           value={incrementAmount}
           onChange={(e) => setIncrementAmount(e.target.value)}
         />
         <button
-          className={styles.button}
+          className="inline-block bg-green-500 hover:bg-green-300  rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
           onClick={() => dispatch(incrementByAmount(incrementValue))}
         >
           Add Amount
         </button>
         <button
-          className={styles.asyncButton}
+          className="inline-block bg-green-500 hover:bg-green-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
           onClick={() => dispatch(incrementAsync(incrementValue))}
         >
           Add Async
         </button>
         <button
-          className={styles.button}
+          className="inline-block bg-green-500 hover:bg-green-300 rounded-full px-3 py-1 text-sm font-semibold text-green-700 mr-2"
           onClick={() => dispatch(incrementIfOdd(incrementValue))}
         >
           Add If Odd
